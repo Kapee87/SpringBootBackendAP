@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -36,19 +35,10 @@ public class PersonaController {
         return "La persona fue eliminada correctamente";
     }
 
-    //URL:PUERTO/personas/editar/-id-/nombre & apellido & img
+    
     @PutMapping("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable Long id,
-            @RequestParam("nombre") String nuevoNombre,
-            @RequestParam("apellido") String nuevoApellido,
-            @RequestParam("img") String nuevoImg) {
-        Persona persona = iPersonaService.findPersona(id);
-        persona.setNombre(nuevoNombre);
-        persona.setApellido(nuevoApellido);
-        persona.setImg(nuevoImg);
-
-        iPersonaService.savePersona(persona);
-
+    public Persona editPersona(@RequestBody Persona persona) {
+        iPersonaService.updatePersona(persona);
         return persona;
     }
 }
