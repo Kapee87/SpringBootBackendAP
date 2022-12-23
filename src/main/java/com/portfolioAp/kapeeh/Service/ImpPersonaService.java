@@ -35,4 +35,11 @@ public class ImpPersonaService implements IPersonaService {
         return persona;
     }
 
+    @Override
+    public void updatePersona(Persona persona) {
+        Persona newPersona = ipersonaRepository.findById(persona.getId()).orElse(null);
+        ipersonaRepository.deleteById(persona.getId());
+        ipersonaRepository.save(newPersona);
+    }
+
 }
