@@ -39,9 +39,7 @@ public class ImpEducacionService implements IEducacionService {
     
     @Override
     public void updateEducacion(Educacion educacion) {
-        Educacion newEducacion = eduRepo.findById(educacion.getIdEdu()).orElse(null);
-        eduRepo.deleteById(educacion.getIdEdu());
-        eduRepo.save(newEducacion);
+        eduRepo.save(educacion);
     }
     
 }

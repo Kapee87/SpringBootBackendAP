@@ -26,19 +26,19 @@ public class Persona implements Serializable {
 
     @NotNull
     @Size(min = 1, max = 45, message = "no cumple con la longitud")
-    private String Nombre;
+    private String nombre;
 
     @NotNull
     @Size(min = 1, max = 45, message = "no cumple con la longitud")
-    private String Apellido;
+    private String apellido;
 
     @NotNull
     @Size(min = 1, max = 45, message = "no cumple con la longitud")
-    private String FechaNac;
+    private String fechaNac;
 
     @NotNull
     @Size(min = 1, max = 45, message = "no cumple con la longitud")
-    private String Telefono;
+    private String telefono;
 
     @NotNull
     @Size(min = 1, max = 45, message = "no cumple con la longitud")

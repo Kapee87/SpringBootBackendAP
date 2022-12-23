@@ -32,11 +32,10 @@ public class ImpSkillsService implements ISkillsService {
         Skills skill = skillsRepo.findById(id).orElse(null);
         return skill;
     }
-//falta completar
 
     @Override
     public void updateSkills(Skills skills) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        skillsRepo.save(skills);
     }
 
 }

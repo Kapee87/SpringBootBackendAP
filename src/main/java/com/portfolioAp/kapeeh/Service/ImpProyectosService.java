@@ -32,11 +32,9 @@ public class ImpProyectosService implements IProyectosService {
         Proyectos proyecto = ProyectosRepo.findById(id).orElse(null);
         return proyecto;
     }
-//falta terminar
 
     @Override
     public void updateProyectos(Proyectos proyectos) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ProyectosRepo.save(proyectos);
     }
-
 }
