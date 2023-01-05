@@ -10,6 +10,8 @@ public interface IExperienciaService {
     public void saveExperiencia(Experiencia experiencia);
 
     public void deleteExperiencia(Long id);
+    
+    public void deleteAll();
 
     public Experiencia findExperiencia(Long id);
 

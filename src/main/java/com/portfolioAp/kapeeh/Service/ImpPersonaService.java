@@ -3,11 +3,13 @@ package com.portfolioAp.kapeeh.Service;
 import com.portfolioAp.kapeeh.Entity.Persona;
 import com.portfolioAp.kapeeh.Interface.IPersonaService;
 import com.portfolioAp.kapeeh.Repository.IPersonaRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class ImpPersonaService implements IPersonaService {
 
     @Autowired
@@ -36,8 +38,8 @@ public class ImpPersonaService implements IPersonaService {
     }
 
     @Override
-    public void updatePersona(Persona persona) {
-        ipersonaRepository.save(persona);
+    public void deleteAll() {
+        ipersonaRepository.deleteAll();
     }
 
 }

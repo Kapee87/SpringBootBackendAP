@@ -3,9 +3,13 @@ package com.portfolioAp.kapeeh.Service;
 import com.portfolioAp.kapeeh.Entity.Proyectos;
 import com.portfolioAp.kapeeh.Interface.IProyectosService;
 import com.portfolioAp.kapeeh.Repository.proyectosRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class ImpProyectosService implements IProyectosService {
 
     @Autowired
@@ -36,5 +40,10 @@ public class ImpProyectosService implements IProyectosService {
     @Override
     public void updateProyectos(Proyectos proyectos) {
         ProyectosRepo.save(proyectos);
+    }
+
+    @Override
+    public void vaciarProyectos() {
+        ProyectosRepo.deleteAll();
     }
 }

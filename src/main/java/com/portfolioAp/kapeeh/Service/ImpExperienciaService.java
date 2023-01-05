@@ -3,10 +3,13 @@ package com.portfolioAp.kapeeh.Service;
 import com.portfolioAp.kapeeh.Entity.Experiencia;
 import com.portfolioAp.kapeeh.Interface.IExperienciaService;
 import com.portfolioAp.kapeeh.Repository.experienciaRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class ImpExperienciaService implements IExperienciaService {
 
     @Autowired
@@ -26,6 +29,11 @@ public class ImpExperienciaService implements IExperienciaService {
     @Override
     public void deleteExperiencia(Long id) {
         ExpRepo.deleteById(id);
+    }
+    
+    @Override
+    public void deleteAll(){
+        ExpRepo.deleteAll();
     }
 
     @Override

@@ -10,6 +10,8 @@ public interface IProyectosService {
     public void saveProyectos(Proyectos proyecto);
 
     public void deleteProyectos(Long id);
+    
+    public void vaciarProyectos();
 
     public Proyectos findProyecto(Long id);
 

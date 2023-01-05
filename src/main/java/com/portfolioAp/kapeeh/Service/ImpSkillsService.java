@@ -3,9 +3,13 @@ package com.portfolioAp.kapeeh.Service;
 import com.portfolioAp.kapeeh.Entity.Skills;
 import com.portfolioAp.kapeeh.Interface.ISkillsService;
 import com.portfolioAp.kapeeh.Repository.skillsRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class ImpSkillsService implements ISkillsService {
 
     @Autowired
@@ -28,7 +32,7 @@ public class ImpSkillsService implements ISkillsService {
     }
 
     @Override
-    public Skills findProyecto(Long id) {
+    public Skills findSkill(Long id) {
         Skills skill = skillsRepo.findById(id).orElse(null);
         return skill;
     }
@@ -38,4 +42,8 @@ public class ImpSkillsService implements ISkillsService {
         skillsRepo.save(skills);
     }
 
+    @Override
+    public void deleteAllSkills() {
+        skillsRepo.deleteAll();
+    }
 }

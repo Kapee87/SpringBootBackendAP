@@ -11,11 +11,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Experiencia implements Serializable{
+public class Experiencia implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idExp;
+
     private String tituloExp;
     private String empresaExp;
     private String fechaIniExp;

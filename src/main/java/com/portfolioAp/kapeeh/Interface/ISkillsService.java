@@ -11,8 +11,10 @@ public interface ISkillsService {
     public void saveSkills(Skills skills);
 
     public void deleteSkills(Long id);
+    
+    public void deleteAllSkills();
 
-    public Skills findProyecto(Long id);
+    public Skills findSkill(Long id);
 
     public void updateSkills(Skills skills);
 }
