@@ -4,7 +4,9 @@ import com.portfolioAp.kapeeh.Entity.Educacion;
 import com.portfolioAp.kapeeh.Interface.IEducacionService;
 import com.portfolioAp.kapeeh.Repository.educacionRepository;
 import jakarta.transaction.Transactional;
+
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
