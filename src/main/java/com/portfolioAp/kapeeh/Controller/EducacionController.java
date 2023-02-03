@@ -31,9 +31,9 @@ public class EducacionController {
     }
 
     @PostMapping("/educacion/crear")
-    public String createEducacion(@RequestBody Educacion educacion) {
+    public Educacion createEducacion(@RequestBody Educacion educacion) {
         educacionService.saveEducacion(educacion);
-        return "La educacion se registró correctamente";
+        return educacion;
     }
 
     @DeleteMapping("/educacion/borrar/{idEdu}")
@@ -41,17 +41,17 @@ public class EducacionController {
         educacionService.deleteEducacion(idEdu);
         return "La educacion fue eliminada correctamente";
     }
-    
-    @PutMapping ("/educacion/editar/{id}")
-    public Educacion UpdateEducacion(@RequestBody Educacion NewEducacion, @PathVariable Long id){
-     Educacion educacion = educacionService.findEducacion(id);
-     educacion.setDescripcionEdu(NewEducacion.getDescripcionEdu());
-     educacion.setFechaFinEdu(NewEducacion.getFechaFinEdu());
-     educacion.setFechaIniEdu(NewEducacion.getFechaIniEdu());
-     educacion.setImgEdu(NewEducacion.getImgEdu());
-     educacion.setInstitucionEdu(NewEducacion.getInstitucionEdu());
-     educacion.setTituloEdu(NewEducacion.getTituloEdu());
-     educacionService.saveEducacion(educacion);
+
+    @PutMapping("/educacion/editar/{id}")
+    public Educacion UpdateEducacion(@RequestBody Educacion NewEducacion, @PathVariable Long id) {
+        Educacion educacion = educacionService.findEducacion(id);
+        educacion.setDescripcionEdu(NewEducacion.getDescripcionEdu());
+        educacion.setFechaFinEdu(NewEducacion.getFechaFinEdu());
+        educacion.setFechaIniEdu(NewEducacion.getFechaIniEdu());
+        educacion.setImgEdu(NewEducacion.getImgEdu());
+        educacion.setInstitucionEdu(NewEducacion.getInstitucionEdu());
+        educacion.setTituloEdu(NewEducacion.getTituloEdu());
+        educacionService.saveEducacion(educacion);
         return educacion;
     }
 
