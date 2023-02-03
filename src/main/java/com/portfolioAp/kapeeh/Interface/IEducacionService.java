@@ -7,7 +7,7 @@ public interface IEducacionService {
 
     public List<Educacion> getEducacion();
 
-    public void saveEducacion(Educacion educacion);
+    public Educacion saveEducacion(Educacion educacion);
 
     public void deleteEducacion(Long id);
 
