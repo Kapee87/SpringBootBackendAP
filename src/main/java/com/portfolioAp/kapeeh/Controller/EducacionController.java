@@ -33,7 +33,7 @@ public class EducacionController {
     @PostMapping("/educacion/crear")
     public Educacion createEducacion(@RequestBody Educacion educacion) {
         educacionService.saveEducacion(educacion);
-        return educacion;
+        return educacionService.findEducacion(educacion.getIdEdu());
     }
 
     @DeleteMapping("/educacion/borrar/{idEdu}")
