@@ -32,9 +32,9 @@ public class ExperienciaController {
     }
 
     @PostMapping("/laboral/crear")
-    public String crearExperiencia(@RequestBody Experiencia experiencia) {
+    public Experiencia crearExperiencia(@RequestBody Experiencia experiencia) {
         iExperienciaService.saveExperiencia(experiencia);
-        return "La experiencia fue creada con éxito";
+        return experiencia;
     }
 
     @DeleteMapping("/laboral/borrar/{id}")
