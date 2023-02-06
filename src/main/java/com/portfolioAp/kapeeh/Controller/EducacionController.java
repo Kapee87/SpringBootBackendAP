@@ -20,11 +20,6 @@ public class EducacionController {
     @Autowired
     IEducacionService educacionService;
 
-    @GetMapping("/educacion/traerMsj")
-    public String getMsj() {
-        return "algo pasa";
-    }
-
     @GetMapping("/educacion/traer")
     public List<Educacion> getEducacion() {
         return educacionService.getEducacion();
