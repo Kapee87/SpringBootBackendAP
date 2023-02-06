@@ -21,6 +21,11 @@ public class EducacionController {
     IEducacionService educacionService;
 
     @GetMapping("/educacion/traer")
+    public String getMsj() {
+        return "algo pasa";
+    }
+
+    @GetMapping("/educacion/traer")
     public List<Educacion> getEducacion() {
         return educacionService.getEducacion();
     }

@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: com.portfolioAp.kapeeh.KapeehApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.064 s - in com.portfolioAp.kapeeh.KapeehApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 49.085 s <<< FAILURE! - in com.portfolioAp.kapeeh.KapeehApplicationTests
+contextLoads  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@26888c31 testClass = com.portfolioAp.kapeeh.KapeehApplicationTests, locations = [], classes = [com.portfolioAp.kapeeh.KapeehApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7d4f9aae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@273e7444, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@52719fb6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@298a5e20, org.springframework.boot.test.context.SpringBootTestAnnotation@de5c2cfa], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Caused by: java.net.ConnectException: Connection timed out: no further information
+
