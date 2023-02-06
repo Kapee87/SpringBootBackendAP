@@ -7,7 +7,7 @@ public interface IExperienciaService {
 
     public List<Experiencia> getExperiencia();
 
-    public void saveExperiencia(Experiencia experiencia);
+    public Experiencia saveExperiencia(Experiencia experiencia);
 
     public void deleteExperiencia(Long id);
     

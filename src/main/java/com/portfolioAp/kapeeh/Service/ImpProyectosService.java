@@ -22,8 +22,9 @@ public class ImpProyectosService implements IProyectosService {
     }
 
     @Override
-    public void saveProyectos(Proyectos proyecto) {
+    public Proyectos saveProyectos(Proyectos proyecto) {
         ProyectosRepo.save(proyecto);
+        return proyecto;
     }
 
     @Override

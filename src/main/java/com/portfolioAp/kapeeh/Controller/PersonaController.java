@@ -33,9 +33,9 @@ public class PersonaController {
     }
 
     @PostMapping("/personas/crear")
-    public String createPersona(@RequestBody Persona persona) {
+    public Persona createPersona(@RequestBody Persona persona) {
         iPersonaService.savePersona(persona);
-        return "La persona fue creada correctamente";
+        return persona;
     }
 
     @DeleteMapping("/personas/borrar/{id}")

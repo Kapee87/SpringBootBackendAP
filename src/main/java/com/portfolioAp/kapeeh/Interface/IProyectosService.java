@@ -7,7 +7,7 @@ public interface IProyectosService {
 
     public List<Proyectos> getProyectos();
 
-    public void saveProyectos(Proyectos proyecto);
+    public Proyectos saveProyectos(Proyectos proyecto);
 
     public void deleteProyectos(Long id);
     

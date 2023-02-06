@@ -22,8 +22,9 @@ public class ImpSkillsService implements ISkillsService {
     }
 
     @Override
-    public void saveSkills(Skills skills) {
+    public Skills saveSkills(Skills skills) {
         skillsRepo.save(skills);
+        return skills;
     }
 
     @Override

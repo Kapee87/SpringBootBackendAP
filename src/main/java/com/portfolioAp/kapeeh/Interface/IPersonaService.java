@@ -9,7 +9,7 @@ public interface IPersonaService {
     public List<Persona> getPersona();
 
     //Guardar un objeto de tipo Persona
-    public void savePersona(Persona persona);
+    public Persona savePersona(Persona persona);
 
     //Eliminar un usuario por ID
     public void deletePersona(Long id);

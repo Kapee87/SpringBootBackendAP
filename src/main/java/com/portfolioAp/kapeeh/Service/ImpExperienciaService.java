@@ -22,17 +22,18 @@ public class ImpExperienciaService implements IExperienciaService {
     }
 
     @Override
-    public void saveExperiencia(Experiencia experiencia) {
+    public Experiencia saveExperiencia(Experiencia experiencia) {
         ExpRepo.save(experiencia);
+        return experiencia;
     }
 
     @Override
     public void deleteExperiencia(Long id) {
         ExpRepo.deleteById(id);
     }
-    
+
     @Override
-    public void deleteAll(){
+    public void deleteAll() {
         ExpRepo.deleteAll();
     }
 
