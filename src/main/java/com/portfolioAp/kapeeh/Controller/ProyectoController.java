@@ -48,15 +48,14 @@ public class ProyectoController {
     }
 
     @DeleteMapping("/proyectos/borrar/{id}")
-    public String deleteSkillById(@PathVariable Long id) {
+    public Proyectos deleteSkillById(@PathVariable Long id) {
         iProyectosService.deleteProyectos(id);
-        return "El skill fue borrado.";
+        return iProyectosService.findProyecto(id);
     }
-    
-    @DeleteMapping ("proyectos/borrarTodo")
-    public String deleteAllProyecto(){
+
+    @DeleteMapping("proyectos/borrarTodo")
+    public void deleteAllProyecto() {
         iProyectosService.vaciarProyectos();
-        return "Los Proyectos se borraron por completo";
     }
 
 }

@@ -47,15 +47,14 @@ public class SkillsController {
     }
 
     @DeleteMapping("/skills/borrar/{id}")
-    public String deleteSkillById(@PathVariable Long id) {
+    public Skills deleteSkillById(@PathVariable Long id) {
         skillsService.deleteSkills(id);
-        return "El skill fue borrado.";
+        return skillsService.findSkill(id);
     }
-    
-    @DeleteMapping ("skills/borrarTodo")
-    public String deleteAllSkills(){
+
+    @DeleteMapping("skills/borrarTodo")
+    public void deleteAllSkills() {
         skillsService.deleteAllSkills();
-        return "Los skills se borraron por completo";
     }
 
 }

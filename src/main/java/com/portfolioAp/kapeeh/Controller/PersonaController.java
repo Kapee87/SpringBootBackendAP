@@ -39,9 +39,9 @@ public class PersonaController {
     }
 
     @DeleteMapping("/personas/borrar/{id}")
-    public String deletePersona(@PathVariable Long id) {
+    public Persona deletePersona(@PathVariable Long id) {
         iPersonaService.deletePersona(id);
-        return "La persona fue eliminada correctamente";
+        return iPersonaService.findPersona(id);
     }
 
     @PutMapping("/personas/editar/{id}")
@@ -60,9 +60,8 @@ public class PersonaController {
     }
 
     @DeleteMapping("/personas/vaciar")
-    public String deleteAll() {
+    public void deleteAll() {
         iPersonaService.deleteAll();
-        return "Se vació correctamente";
     }
 
 }

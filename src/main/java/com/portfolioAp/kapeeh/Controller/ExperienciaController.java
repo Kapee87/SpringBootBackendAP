@@ -38,15 +38,14 @@ public class ExperienciaController {
     }
 
     @DeleteMapping("/laboral/borrar/{id}")
-    public String deleteExperiencia(@PathVariable Long id) {
+    public Experiencia deleteExperiencia(@PathVariable Long id) {
         iExperienciaService.deleteExperiencia(id);
-        return "La experiencia fue borrada con éxito";
+        return iExperienciaService.findExperiencia(id);
     }
 
     @DeleteMapping("/laboral/vaciar")
-    public String deleteAll() {
+    public void deleteAll() {
         iExperienciaService.deleteAll();
-        return "La lista se borró con éxito";
     }
 
     @PutMapping("/laboral/editar/{id}")

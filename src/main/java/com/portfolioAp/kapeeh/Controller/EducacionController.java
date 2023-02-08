@@ -37,9 +37,9 @@ public class EducacionController {
     }
 
     @DeleteMapping("/educacion/borrar/{idEdu}")
-    public String deleteEducacion(@PathVariable Long idEdu) {
+    public Educacion deleteEducacion(@PathVariable Long idEdu) {
         educacionService.deleteEducacion(idEdu);
-        return "La educacion fue eliminada correctamente";
+        return educacionService.findEducacion(idEdu);
     }
 
     @PutMapping("/educacion/editar/{id}")
