@@ -22,5 +22,4 @@ public class Proyectos implements Serializable {
     private String descripcionProyecto;
     private String imgProyecto;
     private String urlProyecto;
-
 }
