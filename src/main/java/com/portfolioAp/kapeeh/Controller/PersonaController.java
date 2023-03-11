@@ -1,11 +1,10 @@
 package com.portfolioAp.kapeeh.Controller;
 
 import com.portfolioAp.kapeeh.Entity.Persona;
-
 import com.portfolioAp.kapeeh.Interface.IPersonaService;
-
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+
 @CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
 
@@ -32,18 +32,20 @@ public class PersonaController {
         return iPersonaService.findPersona(id);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public Persona createPersona(@RequestBody Persona persona) {
         iPersonaService.savePersona(persona);
         return persona;
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")
     public Persona deletePersona(@PathVariable Long id) {
         iPersonaService.deletePersona(id);
         return iPersonaService.findPersona(id);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@RequestBody Persona newPersona, @PathVariable Long id) {
         Persona persona = iPersonaService.findPersona(id);
@@ -59,6 +61,7 @@ public class PersonaController {
         return persona;
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/vaciar")
     public void deleteAll() {
         iPersonaService.deleteAll();

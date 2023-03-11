@@ -14,6 +14,7 @@ com\portfolioAp\kapeeh\WebConfig.class
 com\portfolioAp\kapeeh\Controller\EducacionController.class
 com\portfolioAp\kapeeh\Repository\educacionRepository.class
 com\portfolioAp\kapeeh\Repository\proyectosRepository.class
+.netbeans_automatic_build
 com\portfolioAp\kapeeh\Interface\IPersonaService.class
 com\portfolioAp\kapeeh\Service\ImpSkillsService.class
 com\portfolioAp\kapeeh\Entity\Persona.class
