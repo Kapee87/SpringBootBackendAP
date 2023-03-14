@@ -1,4 +1,3 @@
-
 package com.portfolioAp.kapeeh;
 
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +8,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * Clase que habilita CORS
+ *
+ * @author Kapeeh
+ */
 @EnableWebMvc
 
 @Configuration
