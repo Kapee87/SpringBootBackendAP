@@ -11,7 +11,7 @@
     <groupId>com.portfolioAp</groupId>
     <artifactId>kapeeh</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Nahuel Andrés Montaner</name>
+    <name>Nahuel Andres Montaner</name>
     <description>Proyecto Backend para portfolio Argentina Programa</description>
     <properties>
         <java.version>17</java.version>
