@@ -14,7 +14,7 @@
     <name>Nahuel Andres Montaner</name>
     <description>Proyecto Backend para portfolio Argentina Programa</description>
     <properties>
-        <java.version>12</java.version>
+        <java.version>19</java.version>
     </properties>
     <dependencies>
         <dependency>
