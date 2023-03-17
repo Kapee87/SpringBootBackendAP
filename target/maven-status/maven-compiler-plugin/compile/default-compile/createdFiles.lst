@@ -16,7 +16,6 @@ com\portfolioAp\kapeeh\Repository\skillsRepository.class
 com\portfolioAp\kapeeh\Interface\IExperienciaService.class
 com\portfolioAp\kapeeh\Service\ImpExperienciaService.class
 com\portfolioAp\kapeeh\Security\Entity\Usuario.class
-com\portfolioAp\kapeeh\WebConfig.class
 com\portfolioAp\kapeeh\Controller\EducacionController.class
 com\portfolioAp\kapeeh\Repository\educacionRepository.class
 com\portfolioAp\kapeeh\Security\MainSecurity.class
